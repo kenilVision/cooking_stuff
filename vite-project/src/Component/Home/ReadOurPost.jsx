@@ -37,7 +37,7 @@ function ReadOurPost() {
               We Specialise in organising Professional Traning Courses
           </div>
     
-              <div className="grid grid-cols-3 gap-x-10 gap-y-10 mt-10">
+              <div className="grid grid-cols-3 gap-x-[53px] gap-y-10 mt-10">
                 {items.map((x, index) => (
                   <PostCard key={index} image={x.image} text={x.text} title={x.title} date={x.date} />
                 ))}

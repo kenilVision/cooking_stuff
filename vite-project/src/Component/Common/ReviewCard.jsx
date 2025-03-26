@@ -2,7 +2,7 @@ import React from 'react'
 
 function ReviewCard({image, text ,clientname ,jobTitle, headline}) {
   return (
-    <div className='bg-white py-10 px-5 '
+    <div className='bg-white py-10 px-5  rounded-lg'
     style={{
         boxShadow: '0px 0px 7px 0px #00000040'
     }}>

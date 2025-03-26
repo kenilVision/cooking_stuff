@@ -22,7 +22,7 @@ function Slider() {
   return (
     <div className="relative w-full">
       <div
-        className="relative  rounded-lg flex justify-center"
+        className="relative  rounded-lg flex  justify-center min-h-[646px]"
         style={{
           backgroundImage: `url(${backgroundImages[currentIndex]})`,
           backgroundSize: 'cover',
@@ -30,7 +30,7 @@ function Slider() {
         }}
       >
        
-       <div className={`w-7xl p-16 min-heigth-[515px] ${currentIndex === 0 ? 'block' : 'hidden'}`}>
+       <div className={`w-7xl p-16 ${currentIndex === 0 ? 'block' : 'hidden'}`}>
         <img src={live} 
         Width="111"
         Height="63px"
@@ -56,7 +56,7 @@ function Slider() {
        </div>
 
 
-       <div className={`w-7xl p-16 ${currentIndex === 1 ? 'block' : 'hidden'}`}>
+       <div className={`w-7xl p-16 my-auto ${currentIndex === 1 ? 'block' : 'hidden'}`}>
         <img src={live} 
         Width="111"
         Height="63px"   
@@ -91,10 +91,10 @@ function Slider() {
 
        </div>
 
-       <div className={`w-7xl p-16 min-heigth-[515px] ${currentIndex === 2 ? 'block' : 'hidden'}`}>
-        <div className='text-black text-6xl font-bold mb-11'> <span className='text-[#B821FA] text-5xl'>Gaint Strawberry</span><br/>
+       <div className={`w-7xl p-16 my-auto   ${currentIndex === 2 ? 'block' : 'hidden'}`}>
+        <div className='text-black text-6xl font-bold mb-11'> <span className='text-[#B821FA] text-[50px]'>Gaint Strawberry</span><br/>
         Workshop</div>
-        <div className='text-white text-5xl font-bold mb-11 bg-[#F99106] rounded-md w-fit p-3'>
+        <div className='text-white text-[50px] font-bold mb-11 bg-[#F99106] rounded-md w-fit p-3'>
         Coming Soon
         </div>
         <div className='text-[#FA2147] text-3xl font-bold  mb-5 '>
@@ -123,17 +123,17 @@ function Slider() {
       <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
         <button
           type="button"
-          className={`w-3 h-3 rounded-full ${currentIndex === 0 ? 'bg-gray-600' : 'bg-gray-300'}`}
+          className={`w-5 h-5 rounded-full ${currentIndex === 0 ? 'bg-[#F99106]' : 'bg-white'}`}
           onClick={() => setCurrentIndex(0)}
         ></button>
         <button
           type="button"
-          className={`w-3 h-3 rounded-full ${currentIndex === 1 ? 'bg-gray-600' : 'bg-gray-300'}`}
+          className={`w-5 h-5 rounded-full ${currentIndex === 1 ? 'bg-[#F99106]' : 'bg-white'}`}
           onClick={() => setCurrentIndex(1)}
         ></button>
         <button
           type="button"
-          className={`w-3 h-3 rounded-full ${currentIndex === 2 ? 'bg-gray-600' : 'bg-gray-300'}`}
+          className={`w-5 h-5 rounded-full ${currentIndex === 2 ? 'bg-[#F99106]' : 'bg-white'}`}
           onClick={() => setCurrentIndex(2)}
         ></button>
       </div>

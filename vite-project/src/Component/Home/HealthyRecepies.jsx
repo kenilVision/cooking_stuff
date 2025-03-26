@@ -40,7 +40,7 @@ function HealthyRecepies() {
 
         <div className="relative z-10 w-7xl p-10 flex flex-col items-center">
           <div className="text-6xl text-black font-bold p-2">Healthy & Tasty Recipes</div>
-          <div className="grid grid-cols-3 gap-x-10 gap-y-10 mt-10">
+          <div className="grid grid-cols-3 gap-x-20 gap-y-10 mt-10">
             {items.map((x, index) => (
               <Card key={index} image={x.image} text={x.text} course={x.course} />
             ))}

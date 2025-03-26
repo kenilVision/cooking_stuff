@@ -22,7 +22,6 @@ const navigation = [
     {
       to:"/Post",
       text:"Posts",
-      
     }
 ]  // data of nav bar 
 
@@ -31,7 +30,11 @@ function Navbar() {
   const navigate = useNavigate()
   return (
   
-    <div className='flex justify-center'>
+    <div className='flex justify-center z-10'
+    style={{
+      boxShadow: '0px 0px 10px 0px #00000040'
+    }}
+    >
     <div className="w-7xl ">
       <nav className="bg-white flex justify-between items-center w-full p-4">
         <div className="flex items-center">
@@ -74,11 +77,11 @@ function Navbar() {
             className=" text-gray-700 font-medium  px-4">
             Sign In
           </button>
-          <button 
+          <NavLink to='/SignUp'
             type="button" 
             className="w-[200px] h-[60px] rounded-[44px] bg-[#f99106] text-white font-medium ">
             Sign Up
-          </button>
+          </NavLink>
         </div>
       </nav>
     </div>
