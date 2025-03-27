@@ -25,10 +25,6 @@ export const roots = [
     }
     ,
     { 
-        path: '/SignIn', 
-        element: <Login />
-    },
-    { 
         path: '/SignUp', 
         element: <SignUp />
     },
