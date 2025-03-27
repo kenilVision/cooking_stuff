@@ -7,6 +7,7 @@ import ReadOurPost from '../Component/Home/ReadOurPost'
 import CheckoutRecentReview from '../Component/Home/CheckoutRecentReview'
 
 function Home() {
+
   return (
     <div>
         <Slider/>

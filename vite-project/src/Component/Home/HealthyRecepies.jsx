@@ -38,15 +38,15 @@ function HealthyRecepies() {
           }}
         ></div>
 
-        <div className="relative z-10 w-7xl p-10 flex flex-col items-center">
-          <div className="text-6xl text-black font-bold p-2">Healthy & Tasty Recipes</div>
-          <div className="grid grid-cols-3 gap-x-20 gap-y-10 mt-10">
+        <div className="relative z-10 w-7xl flex flex-col items-center">
+          <div className="text-5xl  md:text-6xl text-black font-bold p-2">Healthy & Tasty Recipes</div>
+          <div className="grid grid-cols-1 sm:grid-cols-2    gap-x-10 gap-y-10 mt-10 lg:gap-x-5 lg:grid-cols-3">
             {items.map((x, index) => (
               <Card key={index} image={x.image} text={x.text} course={x.course} />
             ))}
           </div>
           <div className='mt-10'>
-                <OrangeButton text='view All' />
+                <OrangeButton text='View All' />
             </div>
         </div>
       </div>
@@ -55,3 +55,6 @@ function HealthyRecepies() {
 }
 
 export default HealthyRecepies;
+
+
+

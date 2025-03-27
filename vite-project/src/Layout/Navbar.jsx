@@ -1,7 +1,7 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import Group from '../assets/Group.png'
+import { useState } from 'react';
 
 const navigation = [
   {
@@ -10,27 +10,34 @@ const navigation = [
     
     },
     {
-    to:"/About",
+    to:'/AllCourse',
     text:"All Course",
    
     },
     {
-    to:"/contact",
+    to:'/ContactUs',
     text:"Contact us",
     
     },
     {
-      to:"/Post",
+      to:'/Posts',
       text:"Posts",
     }
 ]  // data of nav bar 
 
 
 function Navbar() {
-  const navigate = useNavigate()
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+
   return (
   
-    <div className='flex justify-center z-10'
+    <div className='w-full flex justify-center '
     style={{
       boxShadow: '0px 0px 10px 0px #00000040'
     }}
@@ -44,11 +51,11 @@ function Navbar() {
         </div>
         
         {/* Navigation Links */}
-        <div className="flex items-center">
-          <ul className="flex space-x-8">
+        <div className="hidden lg:flex items-center">
+          <ul className="flex md:space-x-0 lg:space-x-4 xl:space-x-8">
             {navigation.map((x) => (
               <li key={x.to} className='p-3'>
-                <NavLink to={x.to} className="py-2 px-3 text-gray-700 hover:text-orange-500">
+                <NavLink to={x.to} className="py-2 px-3 text-lg text-gray-700 hover:text-[#F99106] active:text-[#F99106]">
                   {x.text}
                 </NavLink>
               </li>
@@ -74,18 +81,60 @@ function Navbar() {
 </div>
         <button 
             type="button" 
-            className=" text-gray-700 font-medium  px-4">
+            className=" text-gray-700 font-medium hover:cursor-pointer hidden justify-center items-center lg:flex px-4">
             Sign In
           </button>
           <NavLink to='/SignUp'
             type="button" 
-            className="w-[200px] h-[60px] rounded-[44px] bg-[#f99106] text-white font-medium ">
+            className=" flex items-center justify-center w-[200px] h-[60px] rounded-[44px]  hover:cursor-pointer bg-[#f99106] text-white font-medium ">
             Sign Up
           </NavLink>
+          <div className="lg:hidden flex items-center">
+            <button
+              className="text-gray-700 focus:outline-none"
+              onClick={toggleMenu}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </nav>
+      <div className={`${isMenuOpen ? 'block' : 'hidden'} w-full lg:hidden bg-white`}>
+          <ul className="flex flex-col items-center space-y-4 py-4">
+            {navigation.map((x) => (
+              <li key={x.to} className="w-full hover:bg-[#F99106] text-center">
+                <NavLink
+                  to={x.to}
+                  className="block py-2 text-lg text-gray-700 active:text-[#F99106]"
+                  onClick={() => setIsMenuOpen(false)} // Close the menu when a link is clicked
+                >
+                  {x.text}
+                </NavLink>
+              </li>
+            ))}
+            <li>
+              <button type="button" className="text-gray-700 font-medium hover:cursor-pointer px-4">
+                Sign In
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>
+
   )
  
 }

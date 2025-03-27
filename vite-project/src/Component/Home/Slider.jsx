@@ -16,13 +16,12 @@ function Slider() {
     return () => clearInterval(interval);
   }, [currentIndex]);
 
-  // Background images array
   const backgroundImages = [image1, image2, image3];
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full mt" >
       <div
-        className="relative  rounded-lg flex  justify-center min-h-[646px]"
+        className="relative flex  justify-center min-h-[646px]"
         style={{
           backgroundImage: `url(${backgroundImages[currentIndex]})`,
           backgroundSize: 'cover',
@@ -36,19 +35,22 @@ function Slider() {
         Height="63px"
         className='mb-11'
         />
-        <div className='text-white text-5xl font-bold mb-11'>Find Your <span className='text-[#ffbf00]'>Favorite<br/>
+        <div className='text-white text-4xl sm:text-5xl font-bold mb-11'
+        style={{
+          lineHeight:'151%'
+        }}>Find Your <span className='text-[#ffbf00]'>Favorite<br/>
         Food & Make Better</span> <br/>Your Cooking</div>
-        <div className='text-[#D7F315] text-5xl font-bold mb-5 '>
+        <div className='text-[#D7F315] text-4xl sm:text-5xl font-bold mb-5 '>
         10th - 20th May
         </div>
-        <div className='flex text-2xl text-white'>
+        <div className='flex text-xl sm:text-2xl text-white'>
             <div className='bg-black p-3'>
                 Lifetime access
             </div>
             <div className='bg-[#F99106] p-3'>
                  Videos
             </div>
-            <div className='bg-[#FAEE21] p-3'>
+            <div className='bg-[#FAEE21] text-black p-3'>
                     PDF
             </div>
         </div>
@@ -61,23 +63,27 @@ function Slider() {
         Width="111"
         Height="63px"   
         />
-        <div className='text-white text-5xl font-bold mb-1'><span className='text-[#faee21]'>Variety of Juice</span><br/>
+        <div className='text-white text-4xl sm:text-5xl font-bold mb-1'
+        style={{
+          lineHeight:'141%'
+        }}
+        ><span className='text-[#faee21]'>Variety of Juice</span><br/>
         Workshop </div>
-        <div className='text-black bg-white text-3xl font-bold px-6 py-2 mb-8 w-fit rounded-md '>
-        10th - 20th May
+        <div className='text-black bg-white text-2xl sm:text-3xl font-bold px-6 py-2 mb-8 w-fit rounded-md '>
+        6th - 10th June 12:00PM
         </div>
       
-        <div className='text-white text-3xl font-bold   mb-7'>
+        <div className='text-white text-2xl sm:text-3xl font-bold   mb-7'>
             <span className='relative inline-block pe-3 '>
                 <span className='absolute left-0 right-0 top-1/2  transform rotate-12 border-t-5 border-red-500 w-full h-0'></span>
                 $5000
             </span>
             $500 (Lifetime access)
             </div>
-            <div className='text-white text-3xl font-bold  mb-5'>
+            <div className='text-white text-2xl sm:text-3xl font-bold  mb-5'>
             10+ Recipes
             </div>
-        <div className='flex text-2xl text-white'>
+        <div className='flex text-xl sm:text-2xl text-white'>
             <div className='bg-black p-3'>
                 Lifetime access
             </div>
@@ -92,7 +98,11 @@ function Slider() {
        </div>
 
        <div className={`w-7xl p-16 my-auto   ${currentIndex === 2 ? 'block' : 'hidden'}`}>
-        <div className='text-black text-6xl font-bold mb-11'> <span className='text-[#B821FA] text-[50px]'>Gaint Strawberry</span><br/>
+        <div className='text-black text-5xl sm:text-6xl font-bold mb-11'
+         style={{
+          lineHeight:'141%'
+        }}
+        > <span className='text-[#B821FA] text-[50px]'>Gaint Strawberry</span><br/>
         Workshop</div>
         <div className='text-white text-[50px] font-bold mb-11 bg-[#F99106] rounded-md w-fit p-3'>
         Coming Soon

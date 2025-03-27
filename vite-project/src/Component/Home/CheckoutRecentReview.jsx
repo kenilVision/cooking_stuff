@@ -32,30 +32,30 @@ function CheckoutRecentReview() {
   },
   {
     image: image2,
-    clientname:"Clay Jhonson",
-    jobTitle:"Digital Marketer",
+    clientname:"Nina Sin",
+    jobTitle:"Film Maker",
     headline:"Perfection! went above!",
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames amet dictumst justo, viverra enim egestas. Habitant turpis at adipiscing.',
   },
   {
       image: image3,
-      clientname:"Clay Jhonson",
-      jobTitle:"Digital Marketer",
+      clientname:"Rose Merry",
+      jobTitle:"Developer",
       headline:"Perfection! went above!",
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames amet dictumst justo, viverra enim egestas. Habitant turpis at adipiscing.',
   }],
   [
 {
   image: image2,
-  clientname:"Clay Jhonson",
-  jobTitle:"Digital Marketer",
+  clientname:"Nina Sin",
+  jobTitle:"Film Maker",
   headline:"Perfection! went above!",
   text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames amet dictumst justo, viverra enim egestas. Habitant turpis at adipiscing.',
 },
 {
     image: image3,
-    clientname:"Clay Jhonson",
-    jobTitle:"Digital Marketer",
+    clientname:"Rose Merry",
+    jobTitle:"Developer",
     headline:"Perfection! went above!",
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames amet dictumst justo, viverra enim egestas. Habitant turpis at adipiscing.',
 },
@@ -68,8 +68,8 @@ function CheckoutRecentReview() {
 }],[
 {
     image: image3,
-    clientname:"Clay Jhonson",
-    jobTitle:"Digital Marketer",
+    clientname:"Rose Merry",
+    jobTitle:"Developer",
     headline:"Perfection! went above!",
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames amet dictumst justo, viverra enim egestas. Habitant turpis at adipiscing.',
 },
@@ -82,8 +82,8 @@ function CheckoutRecentReview() {
 },
 {
   image: image2,
-  clientname:"Clay Jhonson",
-  jobTitle:"Digital Marketer",
+  clientname:"Nina Sin",
+  jobTitle:"Film Maker",
   headline:"Perfection! went above!",
   text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames amet dictumst justo, viverra enim egestas. Habitant turpis at adipiscing.',
 }] ];
@@ -100,18 +100,19 @@ function CheckoutRecentReview() {
           }}
         ></div>
 
-        <div className="relative z-10 w-7xl p-10 flex flex-col items-center">
+        <div className="relative z-10 w-7xl  flex flex-col items-center">
           <div className="text-6xl text-black font-bold p-2">Check out Recent Review</div>
           <div className="text-3xl text-gray-600 text-center p-2 w-3/4">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan neque pellentesque lorem eu sollicitudin congue ut amet. 
           </div>
 
-          <div className="grid grid-cols-3 gap-x-13 gap-y-10 mt-10 mb-15">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-13 gap-y-10 mt-10 mb-15">
             {items[currentIndex].map((x, index) => (
               <ReviewCard key={index} image={x.image} text={x.text} clientname={x.clientname} jobTitle={x.jobTitle} headline={x.headline}/>
             ))}
           </div>
-          <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse ">
+
+          <div className=" z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse ">
         <button
           type="button"
           className={`w-5 h-5 rounded-full ${currentIndex === 0 ? 'bg-[#F99106]' : 'bg-[#FFE1E1]'}`}

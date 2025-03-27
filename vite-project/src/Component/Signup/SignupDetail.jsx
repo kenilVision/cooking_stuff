@@ -1,104 +1,89 @@
-import React, from 'react'
-import { NavLink } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-
-import Button from '../Common/Button'
-import Input from '../Common/Input'
+import React from 'react'
+import image from '../../assets/Signup/image 1.jpg'
+import image2 from '../../assets/Signup/Group.jpg'
+import google from '../../assets/Signup/Google.jpg'
+import facebook from '../../assets/Signup/facebook-svgrepo-com (5) 1.jpg'
 function SignupDetail() {
-    const navigate = useNavigate();
+
 
 
   return (
-    <section className="bg-gray-50 min-h-screen dark:bg-gray-900 ">
-    <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto min-h-screen w-full lg:py-0">
-      <div className="w-full max-w-lg bg-white rounded-lg shadow dark:border  dark:bg-gray-800 dark:border-gray-700 mt-10  ">
-        <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-          <h1 className="text-xl font-bold text-center leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-            Create an account
-          </h1>
-          <form className="space-y-4 md:space-y-6" >
-            <div>
-              <label htmlFor="firstName" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                First Name
+    <div className=" flex  justify-center z-0 ">
+      <div className="max-w-7xl w-full md:flex ">
+  
+        <div className=" w-full md:w-1/2 p-10 md:p-22 flex items-center justify-center relative">
+          <div className="  flex items-center justify-center">
+            <div className="flex flex-wrap justify-center">
+           
+              <div className="flex flex-col items-center ">
+              <img src={image2} alt="Cutlery Illustration" className=" mb-10 md:mb-30 " height="57.21" width="260.52" />
+                <img src={image} alt="Cutlery Illustration"  height="556" width="562" className="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Right Section: Signup Form */}
+        <div className="w-full md:w-1/2 p-10 md:p-12 flex flex-col justify-center items-center">
+          <h2 className="text-3xl font-bold text-gray-800 mb-6 ">Welcome to Jammy</h2>
+          <form className='w-full flex flex-col justify-center '>
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-gray-700" htmlFor="name">
+                Full Name
               </label>
-              <Input
+              <input
+                id="name"
                 type="text"
-                name="FirstName"
-                id="firstName"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="First name"
-                
-                required
+                placeholder="John Doe"
+                className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
               />
             </div>
-            <div>
-              <label htmlFor="lastName" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                Last Name
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-gray-700" htmlFor="email">
+                Email
               </label>
-              <Input
-                type="text"
-                name="LastName"
-                id="lastName"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Last name"
-                
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="mobileNumber" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                Mobile Number
-              </label>
-              <Input
-                type="tel"
-                name="MobileNumber"
-                id="mobileNumber"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder='Number'
-                
-                required
-              />
-            </div>
-            <div>
-              <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                Your email
-              </label>
-              <Input
+              <input
+                id="email"
                 type="email"
-                name="Email"
-                id="Email"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="name@company.com"
-                
-                required
+                placeholder="Enter your Email here"
+                className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
               />
             </div>
-            <div>
-              <label  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+            <div className="mb-6">
+              <label className="block text-sm font-medium text-gray-700" htmlFor="password">
                 Password
               </label>
-              <Input
+              <input
+                id="password"
                 type="password"
-                name="Password"
-                id="Password"
-                placeholder="••••••••"
-                
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                required
+                placeholder="Enter your Password"
+                className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
               />
             </div>
-            <Button 
-                     text="Create an account"  
-                     className= "w-full text-center"
-                     />
-            <p className="text-sm font-light text-gray-500 text-center dark:text-gray-400">
-              Already have an account? < NavLink to="/Login" className="font-medium text-primary-600 hover:underline dark:text-primary-500">Login here</ NavLink>
-            </p>
+            <button
+              type="submit"
+              className="w-1/2 py-2 bg-orange-500 text-white mx-auto text-2xly
+               hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500"
+            >
+              Create Account
+            </button>
           </form>
+          <p className="mt-4 text-sm text-gray-500">
+            Already have an account? <a href="#" className="text-orange-500 hover:underline">Log in</a>
+          </p>
+          <div className="mt-6 flex items-center justify-between">
+            <span className="text-gray-500">OR</span>
+          </div>
+          <div className="mt-4 flex space-x-4">
+            <button className="w-full flex items-center justify-center p-2 bg-white border border-[#D2D2D2] ">
+              <img src={google} alt="Google" className=" mr-2" /> Sign up with Google
+            </button>
+            <button className="w-full flex items-center justify-center p-2 bg-white border border-[#D2D2D2] ">
+              <img src={facebook} alt="Facebook" className=" mr-2" /> Sign up with Facebook
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </section>
   )
 }
 

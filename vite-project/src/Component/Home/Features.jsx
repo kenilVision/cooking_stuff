@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useRef} from 'react';
 import bg from '../../assets/Home/sec2/ebc436ec0b58d5a5d4f5d94363fc5ad1.png';
 import image1 from '../../assets/Home/sec2/card/Rectangle 11.jpg';
 import image2 from '../../assets/Home/sec2/card/Rectangle 11 (1).jpg';
@@ -42,7 +42,7 @@ function Features() {
 
   return (
     <>
-      <div className="relative flex justify-center pt-15 pb-15 ">
+      <div id="Feature" className="relative flex justify-center pt-15 pb-15 ">
         {/* Background image with opacity */}
         <div
           className="absolute inset-0 z-0"
@@ -54,13 +54,13 @@ function Features() {
           }}
         ></div>
 
-        <div className="relative z-10 w-7xl p-10 flex flex-col items-center">
-          <div className="text-6xl text-black font-bold p-2">Featured</div>
-          <div className="text-3xl text-gray-600 text-center p-2 w-1/2">
+        <div className="relative z-10 w-7xl  flex flex-col items-center">
+          <div className=" text-5xl  md:text-6xl text-black font-bold p-2">Featured</div>
+          <div className=" text-2xl md:text-3xl text-gray-600 text-center p-2 w-full md:w-1/2">
             We specialize in organizing professional training courses
           </div>
 
-          <div className="grid grid-cols-3 gap-x-20 gap-y-10 mt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2    gap-x-10 gap-y-10 mt-10 lg:gap-x-5 lg:grid-cols-3">
             {items.map((x, index) => (
               <Card key={index} image={x.image} text={x.text} course={x.course} />
             ))}
